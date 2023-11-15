@@ -1,0 +1,232 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.third_section_text_p, .second_section .ss_text p, footer .card, header .header_link a {
+  font-family: Poppins;
+  font-size: 18px;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-align: center;
+}
+
+header .header_link a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid transparent;
+}
+header .header_link a:hover {
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.first_section h1, .first_section h2 {
+  color: #FFFFFF;
+  font-family: Poppins;
+  font-size: 126px;
+  font-weight: bold;
+}
+
+.first_section h2 {
+  font-size: 54px;
+  font-style: italic;
+  rotate: -9deg;
+  position: relative;
+  top: -5%;
+  right: -5%;
+}
+
+.third_section_text h3, .second_section .ss_text h3 {
+  color: #B2D234;
+  font-family: Poppins;
+  font-size: 56px;
+  font-weight: 600;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 25px 40px;
+}
+@media screen and (max-width: 1000px) {
+  header {
+    flex-direction: column;
+  }
+  header .header_link {
+    flex-wrap: wrap;
+  }
+}
+header .header_link {
+  display: flex;
+  gap: 50px;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #B2D234;
+  padding-block: 5%;
+}
+@media screen and (max-width: 1000px) {
+  footer {
+    flex-direction: column;
+    gap: 30px;
+  }
+  footer img {
+    order: 1;
+  }
+}
+footer img {
+  height: 106px;
+}
+footer .card {
+  flex-direction: column;
+  gap: 27px;
+}
+footer .card h4 {
+  font-size: 24px;
+  font-weight: 600;
+}
+footer .card div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.first_section {
+  height: 100vh;
+  background: linear-gradient(rgba(96, 160, 216, 0.62), rgba(178, 210, 52, 0.62)), url(../../assets/header_back.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 800px) {
+  .first_section h1 {
+    font-size: 80px;
+  }
+  .first_section h2 {
+    font-size: 40px;
+  }
+}
+.first_section .fs_links {
+  position: absolute;
+  bottom: 64.5px;
+  right: 60px;
+  display: flex;
+  gap: 20px;
+}
+
+.second_section {
+  height: 100vh;
+  background-image: url(../../assets/Grille\ de\ répétition\ 1.png);
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  overflow: hidden;
+  position: relative;
+}
+.second_section .ss_text {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: unset;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  padding-left: 20%;
+}
+.second_section .ss_text p {
+  color: #606060;
+  padding-right: 33%;
+  text-align: left;
+}
+.second_section .ss_text button {
+  margin-right: 60%;
+}
+.second_section img {
+  position: absolute;
+  z-index: 0;
+  top: 10px;
+  right: -10%;
+  width: auto;
+}
+
+.third_section {
+  background-image: url(../../assets/ismael-trevino-NDyuR4Huig8-unsplash.png);
+  height: 100vh;
+  padding: 5% 10%;
+  display: grid;
+}
+.third_section_text {
+  background-color: rgba(178, 210, 52, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 3% 5%;
+  width: 60%;
+  height: 100%;
+  text-align: center;
+  justify-self: flex-end;
+}
+.third_section_text h3 {
+  color: #FFFFFF;
+  font-size: 52px;
+}
+.third_section_text_p {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-inline: 10%;
+}
+.third_section_text_p .bold {
+  font-weight: 700;
+}
+.third_section_text_p .underlined {
+  text-decoration: underline;
+}
+.third_section_text a {
+  font-size: 24px;
+  font-weight: 600;
+}
+@media screen and (max-width: 1000px) {
+  .third_section {
+    padding: 3%;
+    height: auto;
+  }
+  .third_section_text {
+    justify-self: center;
+  }
+}
+
+.second_section button, header button, .third_section_text a {
+  background-color: #FFFFFF;
+  color: #B2D234;
+  border: none;
+  padding: 9px 30px;
+  border-radius: 5px;
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: 0px 8px 16px #616161;
+}
+
+.second_section button {
+  background-color: #B2D234;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 14px 60px;
+}
+
+/*# sourceMappingURL=style.css.map */

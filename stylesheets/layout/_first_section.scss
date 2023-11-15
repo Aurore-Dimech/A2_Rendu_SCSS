@@ -1,0 +1,31 @@
+.first_section {
+    height: 100vh;
+    background: linear-gradient(rgba($clr-blue, 0.62), rgba($clr-primary, 0.62)), url(../../assets/header_back.png) ;
+    @include flex(center, center);
+    flex-direction: column;
+
+    h1{
+        @extend %main_title;
+    }
+
+    h2 {
+        @extend %second_title;
+    }
+
+    @media screen and (max-width: 800px) {
+        h1 {
+            font-size : 80px;
+        }
+        h2 {
+            font-size: 40px;
+        }
+    }
+
+    .fs_links{
+        position: absolute;
+        bottom : 64.5px;
+        right: 60px;
+        display: flex;
+        gap:20px;
+    }
+}

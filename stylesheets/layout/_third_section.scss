@@ -1,0 +1,55 @@
+.third_section{
+    background-image: url(../../assets/ismael-trevino-NDyuR4Huig8-unsplash.png);
+    height: 100vh;
+    padding: 5% 10%;
+    display: grid;
+
+    &_text {
+        background-color: rgba($clr-primary, 0.8);
+        @include flex(center, space-between);
+        flex-direction: column;
+        padding: 3% 5%;
+        width: 60%;
+        height: 100%;
+        text-align: center;
+        justify-self: flex-end;
+
+        h3 {
+            @extend %third_title;
+            color: $clr-secondary;
+            font-size: 52px;
+        }
+
+        &_p {
+            @extend %main_text;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap:1em;
+            padding-inline: 10%;
+
+            .bold {
+                font-weight: 700;
+            }
+
+            .underlined{
+                text-decoration: underline;
+            }
+        }
+
+        a {
+            @extend %primary_button;
+            font-size: 24px;
+            font-weight: 600;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        padding : 3%;
+        height: auto;
+
+        &_text {
+            justify-self: center;
+        }
+    }
+}

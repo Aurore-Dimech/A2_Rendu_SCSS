@@ -1,0 +1,41 @@
+%main_text {
+    font-family:Poppins;
+    font-size: 18px;
+    color: $clr-secondary;
+    text-decoration: none;
+    text-align: center;
+}
+
+%links {
+    @extend %main_text;
+    @include flex(center, center);
+    border-bottom: 2px solid transparent;
+
+    &:hover{
+        border-bottom: 2px solid $clr-secondary; //modif width + anim
+    }
+}
+
+%main_title {
+    color: $clr-secondary;
+    font-family:Poppins;
+    font-size: 126px;
+    font-weight: bold;
+}
+
+%second_title {
+    @extend %main_title ;
+    font-size: 54px;
+    font-style: italic;
+    rotate: -9deg;
+    position: relative;
+    top:-5%;
+    right : -5%;
+}
+
+%third_title {
+    color: $clr-primary;
+    font-family:Poppins;
+    font-size: 56px;
+    font-weight:600;
+}
