@@ -39,7 +39,7 @@ header .header_link a:hover {
   right: -5%;
 }
 
-.third_section_text h3, .second_section .ss_text h3 {
+.fourth_section_header h3, .third_section_text h3, .second_section .ss_text h3 {
   color: #B2D234;
   font-family: Poppins;
   font-size: 56px;
@@ -207,6 +207,22 @@ footer .card div {
   .third_section_text {
     justify-self: center;
   }
+}
+
+.fourth_section {
+  background-image: url(../../assets/pattern-1.png);
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.fourth_section_header h3 {
+  font-size: 52px;
+}
+.fourth_section_notheader {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .second_section button, header button, .third_section_text a {

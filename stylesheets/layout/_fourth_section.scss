@@ -1,0 +1,18 @@
+.fourth_section {
+    background-image: url(../../assets/pattern-1.png);
+    padding: 5%;
+    @include flex(center, center);
+    flex-direction: column;
+
+    &_header {
+        h3 {
+            @extend %third_title;
+            font-size: 52px;
+        }
+    }
+
+    &_notheader{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
