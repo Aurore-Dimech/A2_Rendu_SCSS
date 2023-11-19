@@ -1,6 +1,5 @@
 .second_section {
     height: 100vh;
-    // padding : 158px 159px;
     background-image: url(../../assets/Grille\ de\ répétition\ 1.png);
     display: grid;
     grid-template-columns: 1fr 0.5fr;
@@ -25,7 +24,7 @@
 
         p {
             @extend %main_text;
-            color : #606060;
+            color : $clr-grey;
             padding-right: 33%;
             text-align: left;
         }
@@ -38,8 +37,39 @@
     img {
         position: absolute;
         z-index:0;
-        top:10px;
-        right: -10%;
-        width: auto;
+        // top:10px;
+        top : -0.5%;
+        right: -12%;
+        width: 65%;
+    }
+
+    @include breakpoint(900px, $type: 'max'){
+        grid-template-columns: 1fr;
+        height: auto;
+
+        .ss_text {
+            padding: 0;
+            @include flex(center, center);
+            padding-block : 10%;
+
+            p {
+                padding-inline : 5%;
+                @include flex(center, center);
+                text-align: left;
+            }
+
+            button {
+                margin: 0;
+                display: flex;
+                align-self: flex-end;
+                margin-right: 5%;
+                background-color: $clr-primary;
+                color: $clr-secondary;
+            }
+        }
+
+        img {
+            display:none;
+        }
     }
 }

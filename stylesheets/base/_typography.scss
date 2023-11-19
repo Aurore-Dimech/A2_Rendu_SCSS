@@ -4,6 +4,7 @@
     color: $clr-secondary;
     text-decoration: none;
     text-align: center;
+    line-height: 120%;
 }
 
 %links {
@@ -12,8 +13,25 @@
     border-bottom: 2px solid transparent;
 
     &:hover{
-        border-bottom: 2px solid $clr-secondary; //modif width + anim
+        border-bottom: 2px solid $clr-secondary;
     }
+
+    //C'est le mieux que j'arrive à faire
+    // &::after{
+        // content:"";
+        // position: absolute;
+        // bottom: -8px;
+        // left: 15%;
+        // right: 15%;
+    //     height: 2px;
+    //     transform: scaleX(0);
+    //     background-color: $clr-secondary;
+    //     transition: transform 0.3s ease-in-out;
+    // }
+
+    // &:hover::after {
+    //     transform: scaleX(1);
+    // }
 }
 
 %main_title {
@@ -34,8 +52,8 @@
 }
 
 %third_title {
+    @extend %main_title ;
     color: $clr-primary;
-    font-family:Poppins;
     font-size: 56px;
-    font-weight:600;
+    line-height: 120%;
 }

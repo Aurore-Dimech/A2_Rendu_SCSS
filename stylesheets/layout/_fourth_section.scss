@@ -3,16 +3,107 @@
     padding: 5%;
     @include flex(center, center);
     flex-direction: column;
+    height: auto;
 
     &_header {
+        display: flex;
+        flex-direction: column;
+        gap : 1em;
+        margin-bottom: 5%;
+
         h3 {
             @extend %third_title;
             font-size: 52px;
+            text-align: center;
+            margin-bottom: 0.3em;
+        }
+
+        p{
+            @extend %main_text;
+            color : $clr-grey;
         }
     }
 
     &_notheader{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+
+        &_menu{
+            display: grid;
+            grid-template-rows: auto;
+            gap: 50px;
+
+            &_card{
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                padding: 10px;
+
+                &_title{
+                    display: flex;
+                    justify-content: space-between;
+                    @extend %third_title;
+                    font-size: 24px;
+                    font-weight: 500;
+                }
+
+                p{
+                    @extend %main_text;
+                    color : $clr-grey;
+                    text-align: left;
+                }
+
+            }
+
+        }
+
+        &_button{
+            @include flex(center, center);
+            flex-direction: column;
+            gap : 10%;
+
+            h2{
+                @extend %second_title;
+                font-size: 64px;
+            }
+
+            p{
+                @extend %main_text;
+                color : $clr-grey;
+                padding-inline : 17%;
+            }
+
+            a{
+                @extend %secondary_button;
+                width: 55%;
+                text-align: center;
+            }
+        }
+        .green{
+            color: $clr-primary;
+        }
+
+        .blue{
+            color: $clr-blue;
+        }
+
+        @include breakpoint(1200px, $type: 'max'){
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+}
+
+.special{
+    border: 1px solid $clr-primary;
+
+    &_announcement{
+        @extend %main_text;
+        font-size: 12px;
+        background-color: $clr-primary;
+        padding: 0.5em;
+        margin-left: 80%;
     }
 }

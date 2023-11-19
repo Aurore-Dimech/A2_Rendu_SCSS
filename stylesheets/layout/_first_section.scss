@@ -1,6 +1,13 @@
+.header_first_section{
+    background: linear-gradient(rgba($clr-blue, 0.62), rgba($clr-primary, 0.62)), url(../../assets/header_back.png) ;
+    // j'arrive pas à faire tourner l'image de background ; j'ai essayer avec le ::before, en créant des div spécifiques pour le background, etc. mais aucun ne fonctionne. J'abandonne
+    background-size: 2000px;
+    display: flex;
+    flex-direction: column;
+}
+
 .first_section {
     height: 100vh;
-    background: linear-gradient(rgba($clr-blue, 0.62), rgba($clr-primary, 0.62)), url(../../assets/header_back.png) ;
     @include flex(center, center);
     flex-direction: column;
 
@@ -12,15 +19,6 @@
         @extend %second_title;
     }
 
-    @media screen and (max-width: 800px) {
-        h1 {
-            font-size : 80px;
-        }
-        h2 {
-            font-size: 40px;
-        }
-    }
-
     .fs_links{
         position: absolute;
         bottom : 64.5px;
@@ -28,4 +26,15 @@
         display: flex;
         gap:20px;
     }
+
+    @include breakpoint(800px, $type: 'max'){
+        h1 {
+            font-size : 70px;
+        }
+        h2 {
+            font-size: 35px;
+            top:-3%;
+        }
+    }
+
 }

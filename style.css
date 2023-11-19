@@ -5,12 +5,13 @@
   margin: 0;
 }
 
-.third_section_text_p, .second_section .ss_text p, footer .card, header .header_link a {
+.special_announcement, .fourth_section_notheader_button p, .fourth_section_notheader_menu_card p, .fourth_section_header p, .third_section_text_p, .second_section .ss_text p, footer .card, header .header_link a {
   font-family: Poppins;
   font-size: 18px;
   color: #FFFFFF;
   text-decoration: none;
   text-align: center;
+  line-height: 120%;
 }
 
 header .header_link a {
@@ -23,14 +24,14 @@ header .header_link a:hover {
   border-bottom: 2px solid #FFFFFF;
 }
 
-.first_section h1, .first_section h2 {
+.first_section h1, .fourth_section_notheader_menu_card_title, .fourth_section_header h3, .third_section_text h3, .second_section .ss_text h3, .fourth_section_notheader_button h2, .first_section h2 {
   color: #FFFFFF;
   font-family: Poppins;
   font-size: 126px;
   font-weight: bold;
 }
 
-.first_section h2 {
+.fourth_section_notheader_button h2, .first_section h2 {
   font-size: 54px;
   font-style: italic;
   rotate: -9deg;
@@ -39,11 +40,10 @@ header .header_link a:hover {
   right: -5%;
 }
 
-.fourth_section_header h3, .third_section_text h3, .second_section .ss_text h3 {
+.fourth_section_notheader_menu_card_title, .fourth_section_header h3, .third_section_text h3, .second_section .ss_text h3 {
   color: #B2D234;
-  font-family: Poppins;
   font-size: 56px;
-  font-weight: 600;
+  line-height: 120%;
 }
 
 header {
@@ -55,18 +55,21 @@ header {
   width: 100%;
   padding: 25px 40px;
 }
-@media screen and (max-width: 1000px) {
+header .header_link {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+@media screen and (max-width: 1075px) {
   header {
     flex-direction: column;
   }
   header .header_link {
     flex-wrap: wrap;
+    gap: 20px;
   }
 }
-header .header_link {
-  display: flex;
-  gap: 50px;
-}
+
 footer {
   display: flex;
   align-items: center;
@@ -93,6 +96,7 @@ footer .card {
 footer .card h4 {
   font-size: 24px;
   font-weight: 600;
+  margin-bottom: 15px;
 }
 footer .card div {
   display: flex;
@@ -102,21 +106,19 @@ footer .card div {
   gap: 0.5em;
 }
 
+.header_first_section {
+  background: linear-gradient(rgba(96, 160, 216, 0.62), rgba(178, 210, 52, 0.62)), url(../../assets/header_back.png);
+  background-size: 2000px;
+  display: flex;
+  flex-direction: column;
+}
+
 .first_section {
   height: 100vh;
-  background: linear-gradient(rgba(96, 160, 216, 0.62), rgba(178, 210, 52, 0.62)), url(../../assets/header_back.png);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-@media screen and (max-width: 800px) {
-  .first_section h1 {
-    font-size: 80px;
-  }
-  .first_section h2 {
-    font-size: 40px;
-  }
 }
 .first_section .fs_links {
   position: absolute;
@@ -124,6 +126,15 @@ footer .card div {
   right: 60px;
   display: flex;
   gap: 20px;
+}
+@media screen and (max-width: 800px) {
+  .first_section h1 {
+    font-size: 70px;
+  }
+  .first_section h2 {
+    font-size: 35px;
+    top: -3%;
+  }
 }
 
 .second_section {
@@ -155,14 +166,46 @@ footer .card div {
 .second_section img {
   position: absolute;
   z-index: 0;
-  top: 10px;
-  right: -10%;
-  width: auto;
+  top: -0.5%;
+  right: -12%;
+  width: 65%;
+}
+@media screen and (max-width: 900px) {
+  .second_section {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .second_section .ss_text {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 10%;
+  }
+  .second_section .ss_text p {
+    padding-inline: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+  .second_section .ss_text button {
+    margin: 0;
+    display: flex;
+    align-self: flex-end;
+    margin-right: 5%;
+    background-color: #B2D234;
+    color: #FFFFFF;
+  }
+  .second_section img {
+    display: none;
+  }
 }
 
 .third_section {
   background-image: url(../../assets/ismael-trevino-NDyuR4Huig8-unsplash.png);
-  height: 100vh;
+  background-size: cover;
+  height: auto;
   padding: 5% 10%;
   display: grid;
 }
@@ -172,9 +215,8 @@ footer .card div {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  padding: 3% 5%;
-  width: 60%;
-  height: 100%;
+  padding: 5% 7%;
+  width: 55%;
   text-align: center;
   justify-self: flex-end;
 }
@@ -183,11 +225,11 @@ footer .card div {
   font-size: 52px;
 }
 .third_section_text_p {
-  text-align: center;
   display: flex;
   flex-direction: column;
   gap: 1em;
-  padding-inline: 10%;
+  padding-inline: 7%;
+  margin-block: 3em;
 }
 .third_section_text_p .bold {
   font-weight: 700;
@@ -195,9 +237,8 @@ footer .card div {
 .third_section_text_p .underlined {
   text-decoration: underline;
 }
-.third_section_text a {
-  font-size: 24px;
-  font-weight: 600;
+.third_section_text_button {
+  width: 50%;
 }
 @media screen and (max-width: 1000px) {
   .third_section {
@@ -206,6 +247,7 @@ footer .card div {
   }
   .third_section_text {
     justify-self: center;
+    width: 80%;
   }
 }
 
@@ -216,16 +258,89 @@ footer .card div {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: auto;
+}
+.fourth_section_header {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 5%;
 }
 .fourth_section_header h3 {
   font-size: 52px;
+  text-align: center;
+  margin-bottom: 0.3em;
+}
+.fourth_section_header p {
+  color: #606060;
 }
 .fourth_section_notheader {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+}
+.fourth_section_notheader_menu {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 50px;
+}
+.fourth_section_notheader_menu_card {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 10px;
+}
+.fourth_section_notheader_menu_card_title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 500;
+}
+.fourth_section_notheader_menu_card p {
+  color: #606060;
+  text-align: left;
+}
+.fourth_section_notheader_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10%;
+}
+.fourth_section_notheader_button h2 {
+  font-size: 64px;
+}
+.fourth_section_notheader_button p {
+  color: #606060;
+  padding-inline: 17%;
+}
+.fourth_section_notheader_button a {
+  width: 55%;
+  text-align: center;
+}
+.fourth_section_notheader .green {
+  color: #B2D234;
+}
+.fourth_section_notheader .blue {
+  color: #60A0D8;
+}
+@media screen and (max-width: 1200px) {
+  .fourth_section_notheader {
+    grid-template-columns: 1fr;
+  }
 }
 
-.second_section button, header button, .third_section_text a {
+.special {
+  border: 1px solid #B2D234;
+}
+.special_announcement {
+  font-size: 12px;
+  background-color: #B2D234;
+  padding: 0.5em;
+  margin-left: 80%;
+}
+
+.third_section_text_button, .second_section button, .fourth_section_notheader_button a, header button {
   background-color: #FFFFFF;
   color: #B2D234;
   border: none;
@@ -235,14 +350,23 @@ footer .card div {
   font-size: 15px;
   font-weight: bold;
   box-shadow: 0px 8px 16px #616161;
+  text-decoration: none;
 }
 
-.second_section button {
+.second_section button, .fourth_section_notheader_button a {
   background-color: #B2D234;
   color: #FFFFFF;
   font-size: 24px;
   font-weight: 600;
-  padding: 14px 60px;
+  padding: 2% 5%;
+}
+
+.third_section_text_button {
+  background-color: #FFFFFF;
+  color: #B2D234;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 2% 5%;
 }
 
 /*# sourceMappingURL=style.css.map */

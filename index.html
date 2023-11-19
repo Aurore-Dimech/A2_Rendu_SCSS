@@ -11,30 +11,35 @@
 </head>
 
 <body>
-    <header>
-        <div>
-            <img src="assets/Logo.png" alt="">
-        </div>
-        <div class="header_link">
-            <a href="">Accueil</a>
-            <a href="">Qui sommes-nous ?</a>
-            <a href="">Menu</a>
-            <a href="">Contact</a>
-            <button>Commander</button>
-        </div>
-    </header>
 
     <main>
 
-        <section class="first_section">
-            <h1>mongoo</h1>
-            <h2>c'est frais pour vous !</h2>
+        <section class="header_first_section">
+            <header>
+                <div>
+                    <img src="assets/Logo.png" alt="">
+                </div>
+                <div class="header_link">
+                    <a href="#">Accueil</a>
+                    <a href="#">Qui sommes-nous ?</a>
+                    <a href="#">Menu</a>
+                    <a href="#">Contact</a>
+                    <button>Commander</button>
+                </div>
+            </header>
+    
+            <section class="first_section">
 
-            <div class="fs_links">
-                <img src="assets/Icon awesome-facebook-square.png" alt="">
-                <img src="assets/Icon awesome-twitter-square.png" alt="">
-                <img src="assets/Icon awesome-instagram.png" alt="">
-            </div>
+                <h1>mongoo</h1>
+                <h2>c'est frais pour vous !</h2>
+    
+                <div class="fs_links">
+                    <img src="assets/Icon awesome-facebook-square.png" alt="">
+                    <img src="assets/Icon awesome-twitter-square.png" alt="">
+                    <img src="assets/Icon awesome-instagram.png" alt="">
+                </div>
+            </section>
+
         </section>
 
         <section class="second_section">
@@ -59,7 +64,7 @@
                     <p>Alors faites votre choix !</p>
                 </div>
 
-                <a href="">En savoir +</a>
+                <button class="third_section_text_button">En savoir +</button>
             </div>
         </section>
 
@@ -89,13 +94,16 @@
                         <p>1 base · 3 ingrédients verts & 1 bleu · Sauce <br>Petit plus et pain offert </p>
                     </div>
 
-                    <div class="fourth_section_notheader_menu_card">
-                        <p class="fourth_section_notheader_menu_card_special">La plus vendue !</p>
-                        <div class="fourth_section_notheader_menu_card_title">
-                            <h4>Salade 2-2</h4>
-                            <h4>9,90€</h4>
+                    
+                    <div>
+                        <p class="special_announcement">La plus vendue !</p>
+                        <div class="fourth_section_notheader_menu_card special">
+                            <div class="fourth_section_notheader_menu_card_title">
+                                <h4>Salade 2-2</h4>
+                                <h4>9,90€</h4>
+                            </div>
+                            <p>1 base · 2 ingrédients verts & 2 bleus · Sauce <br>Petit plus et pain offert</p>
                         </div>
-                        <p>1 base · 2 ingrédients verts & 2 bleus · Sauce <br>Petit plus et pain offert</p>
                     </div>
 
                     <div class="fourth_section_notheader_menu_card">
@@ -116,8 +124,10 @@
                 </div>
 
                 <div class="fourth_section_notheader_button">
-                    <h2>Force verte ?</h2>
-                    <h2>Force bleue ?</h2>
+                    <div class="forces">
+                        <h2 class="green">Force verte ?</h2>
+                        <h2 class="blue">Force bleue ?</h2>
+                    </div>
                     <p>Ne perdez pas une seconde, faites votre choix et venez chercher votre salade dans 20min !</p>
                     <a href="">Passer commande</a>
                 </div>
